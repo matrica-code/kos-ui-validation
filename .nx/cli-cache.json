@@ -1,0 +1,200 @@
+{
+  "allKosProjects": {
+    "data": [
+      {
+        "name": "react",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/apps/react",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/apps/react/.kos.json",
+        "config": {
+          "name": "react",
+          "type": "kos.ui",
+          "version": "0.0.0-SNAPSHOT",
+          "generator": {
+            "projectType": "ui"
+          },
+          "test": {
+            "plugin": {
+              "context": "react"
+            }
+          }
+        },
+        "projectType": "ui"
+      },
+      {
+        "name": "webgl",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/apps/webgl",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/apps/webgl/.kos.json",
+        "config": {
+          "name": "webgl",
+          "type": "kos.ui",
+          "version": "0.0.0-SNAPSHOT",
+          "generator": {
+            "projectType": "ui"
+          },
+          "test": {
+            "plugin": {
+              "context": "webgl"
+            }
+          }
+        },
+        "projectType": "ui"
+      },
+      {
+        "name": "kos-ui-validation-models",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/libs/kos-ui-validation-models",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/libs/kos-ui-validation-models/.kos.json",
+        "config": {
+          "name": "kos-ui-validation-models",
+          "type": "kos.model",
+          "version": "0.0.0-SNAPSHOT",
+          "models": {
+            "beverage": {
+              "name": "beverage",
+              "type": "beverage-model",
+              "singleton": false
+            },
+            "beverage-container": {
+              "name": "beverage-container",
+              "type": "beverage-container-model",
+              "singleton": true,
+              "container": true
+            }
+          },
+          "generator": {
+            "projectType": "model",
+            "defaults": {
+              "model": {
+                "folder": "models"
+              }
+            }
+          }
+        },
+        "projectType": "model"
+      },
+      {
+        "name": "model-components",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/libs/model-components",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/libs/model-components/.kos.json",
+        "config": {
+          "name": "model-components",
+          "type": "kos.model-component",
+          "version": "0.0.0-SNAPSHOT",
+          "generator": {
+            "projectType": "model-component"
+          }
+        },
+        "projectType": "model-component"
+      }
+    ],
+    "timestamp": 1769743972974
+  },
+  "projectsByType:model": {
+    "data": [
+      "kos-ui-validation-models"
+    ],
+    "timestamp": 1769743972974
+  },
+  "allModels": {
+    "data": [
+      {
+        "model": "beverage",
+        "project": "kos-ui-validation-models"
+      },
+      {
+        "model": "beverage-container",
+        "project": "kos-ui-validation-models"
+      }
+    ],
+    "timestamp": 1769743972982
+  },
+  "allProjects": {
+    "data": [
+      "kos-ui-validation-models",
+      "model-components",
+      "react",
+      "webgl"
+    ],
+    "timestamp": 1769743973464
+  },
+  "projectsByMultipleTypes:ui,splash,model-component": {
+    "data": [
+      "react",
+      "webgl",
+      "model-components"
+    ],
+    "timestamp": 1769743973465
+  },
+  "projectsByType:plugin": {
+    "data": [],
+    "timestamp": 1769743973465
+  },
+  "pluginProjects": {
+    "data": [],
+    "timestamp": 1769743973465
+  },
+  "projectsByType:i18n": {
+    "data": [],
+    "timestamp": 1769743973465
+  },
+  "projectDetails:kos-ui-validation-models": {
+    "data": {
+      "root": "libs/kos-ui-validation-models",
+      "name": "kos-ui-validation-models",
+      "targets": {
+        "nx-release-publish": {
+          "dependsOn": [
+            "^nx-release-publish"
+          ],
+          "executor": "@nx/js:release-publish",
+          "options": {},
+          "configurations": {}
+        },
+        "build": {
+          "executor": "@nx/vite:build",
+          "cache": true,
+          "dependsOn": [
+            "^build"
+          ],
+          "inputs": [
+            "production",
+            "^production"
+          ],
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/kos-ui-validation-models"
+          },
+          "configurations": {}
+        },
+        "lint": {
+          "executor": "@nx/eslint:lint",
+          "cache": true,
+          "inputs": [
+            "default",
+            "{workspaceRoot}/.eslintrc.json",
+            "{workspaceRoot}/.eslintignore",
+            "{workspaceRoot}/eslint.config.js"
+          ],
+          "options": {},
+          "configurations": {}
+        },
+        "api": {
+          "options": {
+            "host": "http://127.0.0.1:8081",
+            "defaultVersion": "snapshot",
+            "command": "kosui api:generate --project=kos-ui-validation-models"
+          },
+          "executor": "nx:run-commands",
+          "configurations": {}
+        }
+      },
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
+      "sourceRoot": "libs/kos-ui-validation-models/src",
+      "projectType": "library",
+      "tags": [],
+      "implicitDependencies": []
+    },
+    "timestamp": 1769743974845
+  }
+}

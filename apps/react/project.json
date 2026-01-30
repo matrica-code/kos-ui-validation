@@ -1,0 +1,112 @@
+{
+  "name": "react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react",
+        "index": "apps/react/src/index.html",
+        "baseHref": "./",
+        "main": "apps/react/src/main.ts",
+        "tsConfig": "apps/react/tsconfig.app.json",
+        "assets": ["apps/react/src/favicon.ico", "apps/react/src/assets"],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "apps/react/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true,
+          "baseHref": "/"
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react/src/environments/environment.ts",
+              "with": "apps/react/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react:build",
+        "hmr": true,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react:build:development"
+        },
+        "production": {
+          "buildTarget": "react:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "react:build",
+        "watch": false,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react:build:development"
+        },
+        "production": {
+          "buildTarget": "react:build:production"
+        }
+      }
+    },
+    "kab": {
+      "command": "node tools/scripts/kabtool.mjs build react && node tools/scripts/kabtool.mjs list react ",
+      "options": {
+        "outputPath": "dist/archives/packages/react/",
+        "zipName": "ui.zip",
+        "kabName": "react.kab"
+      },
+      "dependsOn": ["zip"]
+    },
+    "zip": {
+      "command": "node tools/scripts/archiver.js react",
+      "options": {
+        "outputPath": "dist/archives/packages/react/",
+        "zipName": "ui.zip"
+      },
+      "dependsOn": ["build"]
+    },
+    "descriptor": {
+      "command": "node tools/scripts/descriptor.mjs react",
+      "options": {
+        "outputPath": "dist/apps/react",
+        "fileName": "descriptor.json"
+      },
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "bundler",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@kos-ui-validation/kos-ui-validation-models": [
+        "libs/kos-ui-validation-models/src/index.ts"
+      ],
+      "@kos-ui-validation/model-components": [
+        "libs/model-components/src/index.ts"
+      ],
+      "@kos-ui-validation/model-components/kos": [
+        "libs/model-components/src/kos.ts"
+      ],
+      "@kos-ui-validation/model-components/standalone": [
+        "libs/model-components/src/standalone.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

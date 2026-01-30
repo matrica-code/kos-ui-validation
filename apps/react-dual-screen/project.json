@@ -1,0 +1,115 @@
+{
+  "name": "react-dual-screen",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-dual-screen/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react-dual-screen",
+        "index": "apps/react-dual-screen/src/index.html",
+        "baseHref": "./",
+        "main": "apps/react-dual-screen/src/main.ts",
+        "tsConfig": "apps/react-dual-screen/tsconfig.app.json",
+        "assets": [
+          "apps/react-dual-screen/src/favicon.ico",
+          "apps/react-dual-screen/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "apps/react-dual-screen/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true,
+          "baseHref": "/"
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-dual-screen/src/environments/environment.ts",
+              "with": "apps/react-dual-screen/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-dual-screen:build",
+        "hmr": true,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-dual-screen:build:development"
+        },
+        "production": {
+          "buildTarget": "react-dual-screen:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "react-dual-screen:build",
+        "watch": false,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-dual-screen:build:development"
+        },
+        "production": {
+          "buildTarget": "react-dual-screen:build:production"
+        }
+      }
+    },
+    "kab": {
+      "command": "node tools/scripts/kabtool.mjs build react-dual-screen && node tools/scripts/kabtool.mjs list react-dual-screen ",
+      "options": {
+        "outputPath": "dist/archives/packages/react-dual-screen/",
+        "zipName": "ui.zip",
+        "kabName": "react-dual-screen.kab"
+      },
+      "dependsOn": ["zip"]
+    },
+    "zip": {
+      "command": "node tools/scripts/archiver.js react-dual-screen",
+      "options": {
+        "outputPath": "dist/archives/packages/react-dual-screen/",
+        "zipName": "ui.zip"
+      },
+      "dependsOn": ["build"]
+    },
+    "descriptor": {
+      "command": "node tools/scripts/descriptor.mjs react-dual-screen",
+      "options": {
+        "outputPath": "dist/apps/react-dual-screen",
+        "fileName": "descriptor.json"
+      },
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,53 @@
+{
+  "type": "root",
+  "generator": {
+    "defaults": {
+      "model": "kos-ui-validation-models",
+      "model-component": "model-components",
+      "ui": "kos-ui-validation-ui"
+    }
+  },
+  "development": {
+    "hosts": [
+      {
+        "name": "kos-ui-validation-ui",
+        "project": "kos-ui-validation-ui",
+        "port": 4200,
+        "type": "cui",
+        "pluginContext": "kos-ui-validation",
+        "plugins": []
+      },
+      {
+        "name": "webgl",
+        "project": "webgl",
+        "port": 4300,
+        "type": "cui",
+        "pluginContext": "webgl",
+        "plugins": []
+      },
+      {
+        "name": "react",
+        "project": "react",
+        "port": 4400,
+        "type": "cui",
+        "pluginContext": "react",
+        "plugins": []
+      }
+    ],
+    "portRanges": {
+      "kos-ui-validation-ui": {
+        "start": 4200,
+        "next": 4201
+      },
+      "webgl": {
+        "start": 4300,
+        "next": 4301
+      },
+      "react": {
+        "start": 4400,
+        "next": 4401
+      }
+    },
+    "logDir": "/tmp/kos-ui-validation-logs"
+  }
+}

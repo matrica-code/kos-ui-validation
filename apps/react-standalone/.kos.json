@@ -1,0 +1,13 @@
+{
+  "name": "react",
+  "type": "kos.ui",
+  "version": "0.0.0-SNAPSHOT",
+  "generator": {
+    "projectType": "ui"
+  },
+  "test": {
+    "plugin": {
+      "context": "react"
+    }
+  }
+}

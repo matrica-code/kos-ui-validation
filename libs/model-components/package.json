@@ -1,0 +1,24 @@
+{
+  "name": "@kos-ui-validation/model-components",
+  "version": "0.0.1",
+  "main": "./index.cjs.js",
+  "module": "./index.es.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.es.js",
+      "require": "./index.cjs.js"
+    },
+    "./kos": {
+      "types": "./kos.d.ts",
+      "import": "./kos.es.js",
+      "require": "./kos.cjs.js"
+    },
+    "./standalone": {
+      "types": "./standalone.d.ts",
+      "import": "./standalone.es.js",
+      "require": "./standalone.cjs.js"
+    }
+  }
+}

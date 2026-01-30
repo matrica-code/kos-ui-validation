@@ -1,0 +1,90 @@
+{
+  "name": "react-dual-screen-standalone",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-dual-screen-standalone/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react-dual-screen-standalone",
+        "index": "apps/react-dual-screen-standalone/src/index.html",
+        "baseHref": "./",
+        "main": "apps/react-dual-screen-standalone/src/main.ts",
+        "tsConfig": "apps/react-dual-screen-standalone/tsconfig.app.json",
+        "assets": [
+          "apps/react-dual-screen-standalone/src/favicon.ico",
+          "apps/react-dual-screen-standalone/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "apps/react-dual-screen-standalone/webpack.config.ts"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true,
+          "baseHref": "/"
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-dual-screen-standalone/src/environments/environment.ts",
+              "with": "apps/react-dual-screen-standalone/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-dual-screen-standalone:build",
+        "hmr": true,
+        "port": 4211
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-dual-screen-standalone:build:development"
+        },
+        "production": {
+          "buildTarget": "react-dual-screen-standalone:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "react-dual-screen-standalone:build",
+        "watch": false,
+        "port": 4211
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-dual-screen-standalone:build:development"
+        },
+        "production": {
+          "buildTarget": "react-dual-screen-standalone:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

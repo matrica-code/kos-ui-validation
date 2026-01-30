@@ -1,0 +1,194 @@
+{
+  "adUrl": "/video/advertisement.mp4",
+  "beverages": {
+    "1": {
+      "brandColour": "#E5EDD8",
+      "sizesColour": "#E5EDD8",
+      "logo": "watermelon-lemonade",
+      "doneLogo": "watertmelon-lemonade-done",
+      "textColour": "#000000"
+    },
+    "2": {
+      "brandColour": "#FFF614",
+      "sizesColour": "#FFF614",
+      "logo": "electric-lemonade",
+      "doneLogo": "electric-lemonade-done",
+      "textColour": "#000"
+    },
+    "3": {
+      "brandColour": "#FF6701",
+      "sizesColour": "#FF6701",
+      "logo": "dragons-fire",
+      "doneLogo": "dragons-fire-done",
+      "textColour": "#000"
+    },
+    "4": {
+      "brandColour": "#FFDDC0",
+      "sizesColour": "#FFDDC0",
+      "logo": "peach-pit",
+      "doneLogo": "peach-pit-done",
+      "textColour": "#000"
+    },
+    "5": {
+      "brandColour": "#97D16C",
+      "sizesColour": "#97D16C",
+      "logo": "peach-tea",
+      "doneLogo": "peach-tea-done",
+      "textColour": "#000"
+    },
+    "6": {
+      "brandColour": "#E5F7FF",
+      "sizesColour": "#E5F7FF",
+      "logo": "tropic-tea",
+      "doneLogo": "tropic-tea-done",
+      "textColour": "#000"
+    },
+    "7": {
+      "brandColour": "#A8ECCB",
+      "sizesColour": "#A8ECCB",
+      "logo": "dragonball-t",
+      "doneLogo": "dragonball-t-done",
+      "textColour": "#FFFFFF"
+    },
+    "8": {
+      "brandColour": "#FFF726",
+      "sizesColour": "#FFF726",
+      "logo": "pina-tea",
+      "doneLogo": "pina-tea-done",
+      "textColour": "#000"
+    },
+    "9": {
+      "brandColour": "#F3EDFF",
+      "sizesColour": "#F3EDFF",
+      "logo": "berry-patch-tea",
+      "doneLogo": "berry-patch-done",
+      "textColour": "#000"
+    },
+    "10": {
+      "brandColour": "#F2E3CE",
+      "sizesColour": "#F2E3CE",
+      "logo": "vanilla-latte",
+      "doneLogo": "vanilla-latte-done",
+      "textColour": "#000"
+    },
+    "11": {
+      "brandColour": "#F2E3CE",
+      "sizesColour": "#F2E3CE",
+      "logo": "mocha-latte",
+      "doneLogo": "mocha-latte-done",
+      "textColour": "#FFFFFF"
+    },
+    "12": {
+      "brandColour": "#E68C29",
+      "sizesColour": "#E68C29",
+      "logo": "caramel-latte",
+      "doneLogo": "caramel-latte-done",
+      "textColour": "#FFFFFF"
+    },
+    "13": {
+      "brandColour": "#F6A704",
+      "sizesColour": "#F6A704",
+      "logo": "milk-dud-macchiato",
+      "doneLogo": "milk-dud-done",
+      "textColour": "#FFFFFF"
+    },
+    "14": {
+      "brandColour": "#F2E3CE",
+      "sizesColour": "#F2E3CE",
+      "logo": "cookie-dough-latte",
+      "doneLogo": "cookie-dough-done",
+      "textColour": "#000"
+    },
+    "15": {
+      "brandColour": "#FFD2F1",
+      "sizesColour": "#FFD2F1",
+      "logo": "cherry-pie",
+      "doneLogo": "cherry-pie-done",
+      "textColour": "#FFFFFF"
+    },
+    "16": {
+      "brandColour": "#FFD447",
+      "sizesColour": "#FFD447",
+      "logo": "peach-cobbler",
+      "doneLogo": "peach-cobbler-done",
+      "textColour": "#000"
+    },
+    "17": {
+      "brandColour": "#FFF86D",
+      "sizesColour": "#FFF86D",
+      "logo": "pineapple-cake",
+      "doneLogo": "pineapple-cake-done",
+      "textColour": "#000"
+    },
+    "18": {
+      "brandColour": "#F1D6C3",
+      "sizesColour": "#F1D6C3",
+      "logo": "vanilla-on-vanilla",
+      "doneLogo": "vanilla-on-vanilla-done",
+      "textColour": "#000"
+    },
+    "19": {
+      "brandColour": "#E5EDD8",
+      "sizesColour": "#E5EDD8",
+      "logo": "cherries-jubilee",
+      "doneLogo": "cherries-jubilee-done",
+      "textColour": "#000"
+    },
+    "20": {
+      "brandColour": "#74EBED",
+      "sizesColour": "#74EBED",
+      "logo": "to-the-tropics",
+      "doneLogo": "to-the-tropics-done",
+      "textColour": "#000"
+    },
+    "21": {
+      "brandColour": "#EEFF41",
+      "sizesColour": "#EEFF41",
+      "logo": "the-og",
+      "doneLogo": "the-og-done",
+      "textColour": "#FFF"
+    },
+    "22": {
+      "brandColour": "#FFFBB3",
+      "sizesColour": "#FFFBB3",
+      "logo": "tropics-of-cherry",
+      "doneLogo": "tropics-of-cherry-done",
+      "textColour": "#000"
+    },
+    "23": {
+      "brandColour": "#FE7630",
+      "sizesColour": "#FE7630",
+      "logo": "reach-for-the-peach",
+      "doneLogo": "reach-for-the-peach-done",
+      "textColour": "#FFF"
+    },
+    "24": {
+      "brandColour": "#FFFCB2",
+      "sizesColour": "#FFFCB2",
+      "logo": "pina-colada",
+      "doneLogo": "pina-colada-done",
+      "textColour": "#000"
+    },
+    "25": {
+      "brandColour": "#6ED0FF",
+      "sizesColour": "#6ED0FF",
+      "logo": "blue-lagoon",
+      "doneLogo": "blue-lagoon-done",
+      "textColour": "#FFF"
+    },
+    "26": {
+      "brandColour": "#FD6EA8",
+      "sizesColour": "#FD6EA8",
+      "logo": "unicorn-juice",
+      "doneLogo": "unicorn-juice-done",
+      "textColour": "#000"
+    },
+    "27": {
+      "brandColour": "#FFD000",
+      "sizesColour": "#FFD000",
+      "logo": "chingon",
+      "doneLogo": "chingon-done",
+      "textColour": "#000"
+    }
+  }
+}
