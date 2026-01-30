@@ -21,11 +21,11 @@
         "projectType": "ui"
       },
       {
-        "name": "webgl",
-        "path": "/Users/markpomerant/Code/kos-ui-validation/apps/webgl",
-        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/apps/webgl/.kos.json",
+        "name": "react-dual-screen",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/apps/react-dual-screen",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/apps/react-dual-screen/.kos.json",
         "config": {
-          "name": "webgl",
+          "name": "react-dual-screen",
           "type": "kos.ui",
           "version": "0.0.0-SNAPSHOT",
           "generator": {
@@ -33,7 +33,45 @@
           },
           "test": {
             "plugin": {
-              "context": "webgl"
+              "context": "react-dual-screen"
+            }
+          }
+        },
+        "projectType": "ui"
+      },
+      {
+        "name": "react-dual-screen-standalone",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/apps/react-dual-screen-standalone",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/apps/react-dual-screen-standalone/.kos.json",
+        "config": {
+          "name": "react-dual-screen",
+          "type": "kos.ui",
+          "version": "0.0.0-SNAPSHOT",
+          "generator": {
+            "projectType": "ui"
+          },
+          "test": {
+            "plugin": {
+              "context": "react-dual-screen"
+            }
+          }
+        },
+        "projectType": "ui"
+      },
+      {
+        "name": "react-standalone",
+        "path": "/Users/markpomerant/Code/kos-ui-validation/apps/react-standalone",
+        "kosJsonPath": "/Users/markpomerant/Code/kos-ui-validation/apps/react-standalone/.kos.json",
+        "config": {
+          "name": "react",
+          "type": "kos.ui",
+          "version": "0.0.0-SNAPSHOT",
+          "generator": {
+            "projectType": "ui"
+          },
+          "test": {
+            "plugin": {
+              "context": "react"
             }
           }
         },
@@ -86,13 +124,13 @@
         "projectType": "model-component"
       }
     ],
-    "timestamp": 1769743972974
+    "timestamp": 1769809790897
   },
   "projectsByType:model": {
     "data": [
       "kos-ui-validation-models"
     ],
-    "timestamp": 1769743972974
+    "timestamp": 1769809790899
   },
   "allModels": {
     "data": [
@@ -109,32 +147,36 @@
   },
   "allProjects": {
     "data": [
+      "react-dual-screen-standalone",
       "kos-ui-validation-models",
+      "react-dual-screen",
       "model-components",
-      "react",
-      "webgl"
+      "react-standalone",
+      "react"
     ],
-    "timestamp": 1769743973464
+    "timestamp": 1769809791905
   },
   "projectsByMultipleTypes:ui,splash,model-component": {
     "data": [
       "react",
-      "webgl",
+      "react-dual-screen",
+      "react-dual-screen-standalone",
+      "react-standalone",
       "model-components"
     ],
-    "timestamp": 1769743973465
+    "timestamp": 1769809791906
   },
   "projectsByType:plugin": {
     "data": [],
-    "timestamp": 1769743973465
+    "timestamp": 1769809791906
   },
   "pluginProjects": {
     "data": [],
-    "timestamp": 1769743973465
+    "timestamp": 1769809791906
   },
   "projectsByType:i18n": {
     "data": [],
-    "timestamp": 1769743973465
+    "timestamp": 1769809791907
   },
   "projectDetails:kos-ui-validation-models": {
     "data": {
